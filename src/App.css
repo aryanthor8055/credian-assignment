@@ -1,0 +1,29 @@
+.Card-Components{
+    margin-top: 7rem;
+}
+.card{
+    width: 400px;
+    height: 200px;
+   
+}
+.card-1{
+    background-color:#e2e7fe;
+}
+
+.card-2{
+    background-color:#f9f9f9;
+}
+
+
+.card-300-text{
+    color: #0079ff;
+    font-weight: 600;
+}
+.USD{
+    color: black;
+    font-weight: 600;
+}
+.pro{
+    width: 5rem;
+    margin-right: 1rem;
+}

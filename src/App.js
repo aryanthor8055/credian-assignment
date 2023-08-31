@@ -1,21 +1,16 @@
 import './App.css';
-import NOTInThirdState from './Components/NOTInThirdState';
-import NumberOfTransaction from './Components/NumberOfTransaction';
-import Table from './Components/Table';
-import TotalAmount from './Components/TotalAmount';
+import {Route,Routes} from 'react-router-dom'
+import HomePage from './Pages/HomePage';
+import TransactionDetails from './Pages/TransactionDetails';
+import Data from './Data';
 
 function App() {
   return (
-    <div className="App">
-      <div className='Card-Components d-flex justify-content-around mt-5'>
-
-      
-      <NumberOfTransaction/>
-      <TotalAmount/>
-      <NOTInThirdState/>
-      </div>
-      <Table/>
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage Data={Data}/>}/>
+      <Route path='/transaction-details' element={<TransactionDetails Data={Data}/>}/>
+    </Routes>
+    
   );
 }
 

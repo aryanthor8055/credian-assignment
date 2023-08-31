@@ -2,17 +2,17 @@ import React from 'react'
 
 const NumberOfTransaction = () => {
   return (
-    <div className="card bg-info" style={{ width: '400px', height: '200px' }}>
+    <div className="card card-1">
     <div className="card-body d-flex align-items-center">
         <div className='Image'>
         <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymMytyAYNeN6tRSUo4DKoW2VhZnyLkZckWIzCpIYcPcfCdxteoq0k40b4WgH9rsNCwKE&usqp=CAU"
+        src="../../assets/dollar.PNG"
         alt="Icon"
-        style={{ width: '50px', height: '50px',marginRight:'20px'}}
+        style={{ width: '70px', height: '70px',marginRight:'20px'}}
       />
         </div>
         <div className='card-title'>
-      <h4 className="card-title mt-3">300K <span className='fs-6'>USD </span></h4>
+      <h3 className="card-title mt-3 card-300-text">300K <span className='fs-6 USD'>USD </span></h3>
         <h6>1.25%</h6>
         </div>
       
