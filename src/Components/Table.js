@@ -1,7 +1,11 @@
 import React from 'react'
 import {CiMenuKebab} from 'react-icons/ci'
+import { useNavigate } from 'react-router-dom'
+
 
 const Table = ({Data}) => {
+
+  const navigate=useNavigate()
   return (
     <table class="table mt-5">
   <thead>
@@ -20,7 +24,7 @@ const Table = ({Data}) => {
   <tbody>
     {
       Data.map((d)=>(
-      <tr>
+      <tr key={d.id} onClick={() => navigate(`/transaction-detail/${d.id}`)} className='Table-row'>
       <th>{d.TransactionDate}</th>
       <td>{d.InvoiceNo}</td>
       <td></td>
@@ -28,10 +32,11 @@ const Table = ({Data}) => {
       <td>{d.Payee}</td>
       <td>{d.Amount}</td>
       <td>{d.USDEquivalent}</td>
+      
       <td>
-        <progress id="file" value="100" max="100"  className='pro'/>
-        <progress id="file" value="32" max="100" className='pro'/>
-        <progress id="file" value="0" max="100" className='pro'/>
+        <progress id="file" value={d.Status.p1} max="100"  className='pro'/>
+        <progress id="file" value={d.Status.p2} max="100" className='pro'/>
+        <progress id="file" value={d.Status.p3} max="100" className='pro'/>
       
       </td>
       <button><CiMenuKebab/></button>

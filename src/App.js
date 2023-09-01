@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<HomePage Data={Data}/>}/>
-      <Route path='/transaction-details' element={<TransactionDetails Data={Data}/>}/>
+      <Route path="/transaction-detail/:id" element={<TransactionDetails Data={Data}/>}/>
     </Routes>
     
   );
